@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:email="http://www.mulesoft.org/schema/mule/email" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/email http://www.mulesoft.org/schema/mule/email/current/mule-email.xsd">
+	<error-handler name="gehError_Handler" doc:id="67e14cb5-da68-4796-83d8-8f5528e5cb1e" >
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="5679801c-e7a6-4bd2-a1a1-59a51564ca39" >
+			<logger level="INFO" doc:name="Logger" doc:id="50c01528-c69d-4db1-a2f3-62d33f8bc36c" message="ON GEH"/>
+		</on-error-propagate>
+	</error-handler>
+</mule>
