@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.4.0-20211227</app.runtime>
+		<app.runtime>4.4.0</app.runtime>
 		<mule.maven.plugin.version>3.5.2</mule.maven.plugin.version>
 	</properties>
 
@@ -31,15 +31,13 @@
 				<extensions>true</extensions>
 				<configuration>
 				    <cloudHubDeployment>
-      <uri>https://anypoint.mulesoft.com</uri>
-      <muleVersion>${app.runtime}</muleVersion>
-      <username>${username}</username>
-      <password>${password}</password>
-      <applicationName>${cloudhub.application.name}</applicationName>
-      <environment>${environment}</environment>
-      <region>${region}</region>
-      <workers>${workers}</workers>
-      <workerType>${workerType}</workerType>
+      <muleVersion>4.4.0</muleVersion>
+      <username>harshsharma_apisero5</username>
+      <password>Harsh_sharma10</password>
+      <applicationName>cicd1</applicationName>
+      <environment>Sandbox</environment>
+      <workers>1</workers>
+      <workerType>Micro</workerType>
       <properties>
         <key>value</key>
       </properties>
@@ -49,10 +47,6 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	
-	
-
 	<dependencies>
 		<dependency>
 			<groupId>org.mule.connectors</groupId>
