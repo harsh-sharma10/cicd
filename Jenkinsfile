@@ -13,5 +13,6 @@ pipeline{
 			steps{
 			bat 'newman run C:\\NewMan\\WorldTimeZone.postman_collection.json --disable-unicode'
 		}}
+	
 	}	
 }
