@@ -11,7 +11,7 @@ pipeline{
 		}}
 		stage('Munit Testing'){
 		steps{
-			bat 'mvn clean install'
+			bat 'mvn test'
 		}}
 		stage('Perform Regresssion testing'){
 			steps{
