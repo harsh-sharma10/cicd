@@ -9,6 +9,10 @@ pipeline{
 		steps{
 			bat 'mvn clean install'
 		}}
+		stage('Munit Testing'){
+		steps{
+			bat 'mvn clean install'
+		}}
 		stage('Perform Regresssion testing'){
 			steps{
 			bat 'newman run C:\\NewMan\\WorldTimeZone.postman_collection.json --disable-unicode'
