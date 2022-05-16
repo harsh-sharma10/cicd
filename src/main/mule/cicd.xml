@@ -10,9 +10,10 @@ http://www.mulesoft.org/schema/mule/email http://www.mulesoft.org/schema/mule/em
 	</http:listener-config>
 	<configuration doc:name="Configuration" doc:id="669c4db8-73f0-4d7a-a466-af1f4e08eb47" defaultErrorHandler-ref="gehError_Handler" />
 	<flow name="cicdFlow" doc:id="69654a92-9599-4f73-9ea5-d1f22834bbe4" >
-		<http:listener doc:name="Listener" doc:id="a1956bf7-02b1-4b1b-b52e-78282abac1ef" config-ref="HTTP_Listener_config" path="/cicd"/>
+		<http:listener doc:name="Listener" doc:id="a1956bf7-02b1-4b1b-b52e-78282abac1ef" config-ref="HTTP_Listener_config" path="/cicd" outputMimeType="application/json; streaming=true"/>
 		<logger level="INFO" doc:name="Logger" doc:id="a045d556-3b88-4b86-a7eb-5f6687048f1e" message="*****CICD ***********"/>
 		<raise-error doc:name="Raise error" doc:id="b77ec850-3a98-4448-8122-a9a0dbc432e4" type="MULE:CONNECTIVITY" description="Global error handler called"/>
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="037d3145-1514-42a9-a9aa-dc2d3ae09f20" />
 		<logger level="INFO" doc:name="Logger" doc:id="30275fbe-d845-4b93-ab0a-b8d9364c6f61" message="End"/>
 	</flow>
 </mule>
