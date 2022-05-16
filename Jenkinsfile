@@ -5,13 +5,13 @@ pipeline{
 		steps{
 			bat 'mvn clean install'
 		}}
-		stage('Deploy application to Mulesoft Cloudhub'){
-		steps{
-			bat 'mvn clean install'
-		}}
 		stage('Munit Testing'){
 		steps{
 			bat 'mvn test'
+		}}
+				stage('Deploy application to Mulesoft Cloudhub'){
+		steps{
+			bat 'mvn package deploy -DmuleDeploy'
 		}}
 		stage('Perform Regresssion testing'){
 			steps{
